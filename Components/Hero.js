@@ -24,7 +24,7 @@ export default function Hero() {
                 </p>
 
                 <button className="mt-8 px-6 py-3 bg-white text-black rounded-lg">
-                    Explore System
+                    Identify a Leopard
                 </button>
 
             </div>
