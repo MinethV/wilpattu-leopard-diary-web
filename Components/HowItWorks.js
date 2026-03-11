@@ -66,7 +66,7 @@ export default function HowItWorks() {
                             </div>
 
                             <div className="bg-gray-100 rounded-2xl aspect-[4/5] w-full max-w-sm mx-auto overflow-hidden relative group">
-                                <img src="/identify-leopard-image-two.png" alt="Analysis" className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
+                                <img src="/kuweni.jpg" alt="Analysis" className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
                                     onError={(e) => { e.target.style.display = 'none'; }}
                                 />
 
