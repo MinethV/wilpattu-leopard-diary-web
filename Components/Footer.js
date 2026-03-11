@@ -6,8 +6,12 @@ export default function Footer() {
             <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col items-center">
 
                 <div className="flex items-center gap-2 mb-6">
-                    <div className="w-8 h-8 bg-black text-white rounded-lg flex items-center justify-center font-bold text-sm shadow-md">
-                        L
+                    <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
+                        <img
+                            src="/leopard-icon.png"
+                            alt="Wilpattu Leopard Diary"
+                            className="w-5 h-5 object-contain"
+                        />
                     </div>
                     <span className="text-xl font-semibold tracking-tight text-gray-900">
                         Wilpattu <span className="text-gray-400 font-medium">Leopard Diary</span>
