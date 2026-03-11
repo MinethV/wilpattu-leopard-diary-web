@@ -111,7 +111,7 @@ export default function ContactPage() {
             {/* Direct Email Section */}
             <div className="text-center pt-8 max-w-4xl mx-auto px-6">
                 <p className="text-gray-400 font-medium">
-                    Email: <a href="mailto:leopardresearch@example.com" className="hover:text-black transition-colors">leopardresearch@example.com</a>
+                    Email: <a href="mailto:leopardresearch@example.com" className="hover:text-black transition-colors">wilpattuleoparddidary@gmail.com</a>
                 </p>
             </div>
 
