@@ -2,37 +2,37 @@ export default function FeaturesPage() {
     const features = [
         {
             title: "AI Leopard Identification",
-            description: "Identify individual Sri Lankan leopards using AI-powered facial pattern recognition. Upload a clear image of the leopard's face and the system compares it with the Wilpattu leopard database to find the closest match.",
+            description: "Identify individual Sri Lankan leopards using our AI-powered leopard identification system. Upload a clear image of the leopard’s face and the system compares it with the Wilpattu leopard database to find the closest match.",
             image: "/identifying-leopard-image.png",
             alt: "Identify Leopard Upload Screen"
         },
         {
             title: "Instant Identification Results",
-            description: "The AI model analyzes the uploaded leopard face and returns the most likely match with a confidence score, territory information, and leopard profile details.",
+            description: "The AI leopard identification system analyzes the uploaded image and returns the most likely leopard match with a confidence score, territory information, and profile details from the Wilpattu leopard database.",
             image: "/identification-result.png",
             alt: "Identification Result Screen"
         },
         {
             title: "Record Leopard Sightings",
-            description: "Users can record leopard sightings in the field including location, date, time, photos, and notes. Sightings are stored locally and synced when internet is available.",
+            description: "Users can record leopard sightings inside Wilpattu National Park including location, date, time, photos, and notes. Sightings are stored locally and synchronized when internet access is available.",
             image: "/add-sighting.png",
             alt: "Add Sighting Screen"
         },
         {
             title: "GPS Leopard Sightings Map",
-            description: "View all recorded leopard sightings across Wilpattu National Park using an interactive GPS map. Easily explore where different leopards have been observed.",
+            description: "View all recorded leopard sightings across Wilpattu National Park using an interactive GPS tracking map. Easily explore where different Sri Lankan leopards have been observed.",
             image: "/map-screen.png",
             alt: "Map Screen"
         },
         {
             title: "Wilpattu Leopard Database",
-            description: "Browse the full database of known leopards including Neluma, Cleopatra, Kuweni, Chithra, Kuruttupandi, Kesara, and Some. Each profile includes territory, gender, and identification data.",
+            description: "Browse the full database of known Sri Lankan leopards including Neluma, Cleopatra, Kuweni, Chithra, Kuruttupandi, Kesara, and Some. Each leopard profile includes territory information, gender, and identification data from Wilpattu National Park.",
             image: "/database-screen.png",
             alt: "Leopard Database Screen"
         },
         {
             title: "Recent Sightings Feed",
-            description: "Stay updated with the latest leopard sightings inside Wilpattu National Park. The feed displays recent observations with time, location, and leopard information.",
+            description: "Stay updated with the latest leopard sightings inside Wilpattu National Park. The feed displays recent leopard observations including time, location, and identified individual leopard profiles..",
             image: "/sightings-feed.png",
             alt: "Recent Sightings Screen"
         }
@@ -47,7 +47,7 @@ export default function FeaturesPage() {
                     System Features
                 </h1>
                 <p className="text-lg md:text-xl text-gray-500 leading-relaxed max-w-2xl mx-auto">
-                    The AI-powered leopard identification platform helps tourists, photographers, and researchers track and identify individual leopards using cutting-edge image recognition technology.
+                    The AI-powered leopard identification system helps tourists, wildlife photographers, and researchers identify individual Sri Lankan leopards and track leopard sightings across Wilpattu National Park using advanced image recognition technology.
                 </p>
             </section>
 

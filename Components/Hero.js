@@ -19,8 +19,9 @@ export default function Hero() {
                 </h1>
 
                 <p className="mt-6 text-lg max-w-xl mx-auto">
-                    AI-powered leopard identification and sighting recording
-                    system designed for Wilpattu National Park.
+                    An AI-powered leopard identification system designed for
+                    Wilpattu National Park to help tourists, photographers, and
+                    researchers identify individual Sri Lankan leopards and record sightings.
                 </p>
 
                 <button className="mt-8 px-6 py-3 bg-white text-black rounded-lg">
