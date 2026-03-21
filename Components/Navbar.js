@@ -1,47 +1,91 @@
-import Link from "next/link"
+"use client";
+
+import Link from "next/link";
+import { useState } from "react";
 
 export default function Navbar() {
+
+    const [open, setOpen] = useState(false);
+
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 transition-all duration-300">
-            <div className="max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center h-20">
+        <>
+            {/* NAVBAR */}
+            <nav className="fixed top-0 left-0 right-0 z-40 bg-white/80 backdrop-blur-md border-b border-gray-100">
+                <div className="max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center h-20">
 
-                {/* Logo */}
-                <Link href="/" className="flex items-center gap-2 group">
-                    <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
-                        <img
-                            src="/leopard-icon.png"
-                            alt="Wilpattu Leopard Diary"
-                            className="w-5 h-5 object-contain"
-                        />
-                    </div>
-                    <span className="text-xl font-semibold tracking-tight text-gray-900">
-                        Wilpattu <span className="text-gray-400 font-medium">Leopard Diary</span>
-                    </span>
-                </Link>
-
-                {/* Desktop Links */}
-                <div className="hidden md:flex gap-8 items-center text-sm font-medium text-gray-500">
-                    <Link href="/" className="hover:text-black transition-colors">Home</Link>
-                    <Link href="/features" className="hover:text-black transition-colors">Features</Link>
-                    <Link href="/benefits" className="hover:text-black transition-colors">Benefits</Link>
-                    <Link href="/about" className="hover:text-black transition-colors">About</Link>
-
-                    <Link
-                        href="/contact"
-                        className="ml-4 px-5 py-2.5 bg-black text-white rounded-full hover:bg-gray-800 transition-all hover:shadow-lg hover:shadow-black/20"
-                    >
-                        Get Started
+                    {/* Logo */}
+                    <Link href="/" className="flex items-center gap-2">
+                        <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center">
+                            <img src="/leopard-icon.png" className="w-5 h-5" />
+                        </div>
+                        <span className="text-xl font-semibold">
+                            Wilpattu <span className="text-gray-400">Leopard Diary</span>
+                        </span>
                     </Link>
+
+                    {/* Desktop */}
+                    <div className="hidden md:flex gap-8 items-center text-sm text-gray-500">
+                        <Link href="/">Home</Link>
+                        <Link href="/features">Features</Link>
+                        <Link href="/benefits">Benefits</Link>
+                        <Link href="/about">About</Link>
+
+                        <Link href="/contact" className="ml-4 px-5 py-2.5 bg-black text-white rounded-full">
+                            Get Started
+                        </Link>
+                    </div>
+
+                    {/* Mobile Button */}
+                    <button
+                        className="md:hidden p-2"
+                        onClick={() => setOpen(true)}
+                    >
+                        ☰
+                    </button>
+
                 </div>
+            </nav>
 
-                {/* Mobile Menu Button - simplified */}
-                <button className="md:hidden p-2 text-gray-600">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
+            {/* 🔥 FULL SCREEN MENU */}
+            {open && (
+                <div className="fixed inset-0 z-50 bg-white flex flex-col">
 
-            </div>
-        </nav>
-    )
+                    {/* Top bar */}
+                    <div className="flex justify-between items-center px-6 h-20 border-b">
+                        <div className="flex items-center gap-2">
+                            <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center">
+                                <img src="/leopard-icon.png" className="w-5 h-5" />
+                            </div>
+                            <span className="font-semibold">
+                                Wilpattu <span className="text-gray-400">Leopard Diary</span>
+                            </span>
+                        </div>
+
+                        <button onClick={() => setOpen(false)} className="text-2xl">
+                            ✕
+                        </button>
+                    </div>
+
+                    {/* 🔥 CENTERED MENU */}
+                    <div className="flex-1 flex flex-col justify-center items-center gap-8 text-xl">
+
+                        <Link href="/" onClick={() => setOpen(false)}>Home</Link>
+                        <Link href="/features" onClick={() => setOpen(false)}>Features</Link>
+                        <Link href="/benefits" onClick={() => setOpen(false)}>Benefits</Link>
+                        <Link href="/about" onClick={() => setOpen(false)}>About</Link>
+
+                        <Link
+                            href="/contact"
+                            onClick={() => setOpen(false)}
+                            className="mt-6 px-8 py-4 bg-black text-white rounded-full"
+                        >
+                            Get Started
+                        </Link>
+
+                    </div>
+
+                </div>
+            )}
+        </>
+    );
 }
