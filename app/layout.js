@@ -12,20 +12,20 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-8DPC2M42Y2"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-8DPC2M42Y2');
-          `}
-        </Script>
-      </head>
+      
+      {/* ✅ MOVE SCRIPT HERE (NOT inside <head>) */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-8DPC2M42Y2"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-8DPC2M42Y2');
+        `}
+      </Script>
 
       <body className="antialiased text-gray-900 bg-white">
         <Navbar />
